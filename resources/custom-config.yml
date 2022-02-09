@@ -1,0 +1,3 @@
+stages:
+  Additional Unit Tests:
+    npmExecuteScripts: false
