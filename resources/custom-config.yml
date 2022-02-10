@@ -3,9 +3,9 @@ stages:
     mavenExecuteStaticCodeChecks: false
     # npmExecuteLint: true
 
-  Additional Unit Tests:
-    npmExecuteScripts: false
-    karmaExecuteTests: false
+  # Additional Unit Tests:
+  #   npmExecuteScripts: false
+  #   karmaExecuteTests: false
 
   # Acceptance:
   #   cloudFoundryDeploy: false
