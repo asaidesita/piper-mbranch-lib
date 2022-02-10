@@ -17,7 +17,7 @@ stages:
   #   uiVeri5ExecuteTests: false
 
   Release:
-    cloudFoundryDeploy: true
+    cloudFoundryDeploy: false
     cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
     cfOrg: "DBS Japan Shared_eu10"
     cfSpace: "demo-eu10"
@@ -35,9 +35,9 @@ steps:
   cloudFoundryDeploy:
     mtaDeployParameters: "-f --version-rule ALL"
 
-  tmsUpload:
-    nodeName: "rasai-jp10-demo"
-    credentialsId: "tms-rasai-sk"
-    nodeExtDescriptorMapping:
-      rasai-jp10-demo: 'qa.mtaext'
-      rasai-jp10-demo1: 'prod.mtaext'
+  # tmsUpload:
+  #   nodeName: "rasai-jp10-demo"
+  #   credentialsId: "tms-rasai-sk"
+  #   nodeExtDescriptorMapping:
+  #     rasai-jp10-demo: 'qa.mtaext'
+  #     rasai-jp10-demo1: 'prod.mtaext'
