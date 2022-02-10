@@ -1,20 +1,20 @@
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
-    npmExecuteLint: true
+    # npmExecuteLint: true
 
   Additional Unit Tests:
     npmExecuteScripts: false
     karmaExecuteTests: false
 
-  Acceptance:
-    cloudFoundryDeploy: false
-    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-    cfOrg: "DBS Japan Shared_eu10"
-    cfSpace: "demo-eu10"
-    cfAppName: "dpedev"
-    cfCredentialsId: "rasai-cf-deploy"
-    uiVeri5ExecuteTests: false
+  # Acceptance:
+  #   cloudFoundryDeploy: false
+  #   cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+  #   cfOrg: "DBS Japan Shared_eu10"
+  #   cfSpace: "demo-eu10"
+  #   cfAppName: "dpedev"
+  #   cfCredentialsId: "rasai-cf-deploy"
+  #   uiVeri5ExecuteTests: false
 
   Release:
     cloudFoundryDeploy: true
@@ -29,8 +29,8 @@ steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
 
-  npmExecuteLint:
-    failOnError: true
+  # npmExecuteLint:
+  #   failOnError: true
 
   cloudFoundryDeploy:
     mtaDeployParameters: "-f --version-rule ALL"
